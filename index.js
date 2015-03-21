@@ -202,7 +202,7 @@ var unifi = function(hostname, port, site){
 			if(_.isFunction(CB)){CB(err);}
 		});		
 		req.end('json={"cmd":"authorize-guest", "mac":"' + mac + '", "minutes":"' + minutes + '"}');
-		console.log('json={"cmd":"authorize-guest", "mac":"' + mac + '", "minutes":"' + minutes + '"}');
+//		console.log('json={"cmd":"authorize-guest", "mac":"' + mac + '", "minutes":"' + minutes + '"}');
 	};
 
 	_self.unAuthorizeGuest = function(mac,CB){
