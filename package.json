@@ -1,6 +1,6 @@
 {
-    "name": "unifi-v3",
-    "description": "unifi-v3 is an implementation of the Ubiquiti UniFi Controller V3.x API. This module gives you the same ability as the unifi-api Python version, plus a few extra functions.",
+    "name": "unifi-api-async",
+    "description": "unifi-api-async is an implementation of the Ubiquiti UniFi Controller V3.x API. This module gives you the same ability as the unifi-api Python version, plus a few extra functions.",
     "version": "0.0.7",
     "main": "index.js",
     "engines": {
@@ -11,6 +11,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/aegor/UniFi-V3"
+        "url": "https://github.com/aegor/unifi-api-async"
     }
 }
