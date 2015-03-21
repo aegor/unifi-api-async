@@ -67,7 +67,7 @@ var unifi = function(hostname, port, site){
 			}
 		}),function(res){
 			if(res.statusCode == 302){
-				if(_.isFunction(cb)){cb();}
+				if(_.isFunction(cb)){cb(false);}
 			}else{
 				if(_.isFunction(cb)){cb('There was a problem while logging out');}
 			}
@@ -180,6 +180,7 @@ var unifi = function(hostname, port, site){
 			if(_.isFunction(CB)){CB(err);}
 		});		
 		req.end('json={"cmd":"delete-voucher", "_id":"' + _id + '"}');
+		if(_.isFunction(CB)){CB(false);}
 	};
 
 	_self.authorizeGuest = function(mac, minutes,CB){
@@ -202,6 +203,7 @@ var unifi = function(hostname, port, site){
 			if(_.isFunction(CB)){CB(err);}
 		});		
 		req.end('json={"cmd":"authorize-guest", "mac":"' + mac + '", "minutes":"' + minutes + '"}');
+		if(_.isFunction(CB)){CB(false);}
 //		console.log('json={"cmd":"authorize-guest", "mac":"' + mac + '", "minutes":"' + minutes + '"}');
 	};
 
@@ -225,6 +227,7 @@ var unifi = function(hostname, port, site){
 			if(_.isFunction(CB)){CB(err);}
 		});		
 		req.end('json={"cmd":"unauthorize-guest", "mac":"' + mac + '"}');
+		if(_.isFunction(CB)){CB(false);}
 //		console.log('json={"cmd":"unauthorize-guest", "mac":"' + mac + '"}');
 	};
 };
