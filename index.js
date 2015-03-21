@@ -225,7 +225,7 @@ var unifi = function(hostname, port, site){
 			if(_.isFunction(CB)){CB(err);}
 		});		
 		req.end('json={"cmd":"unauthorize-guest", "mac":"' + mac + '"}');
-		console.log('json={"cmd":"unauthorize-guest", "mac":"' + mac + '"}');
+//		console.log('json={"cmd":"unauthorize-guest", "mac":"' + mac + '"}');
 	};
 };
 
